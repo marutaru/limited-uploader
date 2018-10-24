@@ -1,0 +1,12 @@
+html
+  head
+    title My name is #{name}
+  body
+    h1= content
+    form(action="/images",method="post",enctype="multipart/form-data")
+      input(type="file",name="image")
+      input(type="submit",value="Upload")
+    ul
+      each val in lists
+        li
+          a(href=val) #{val}
